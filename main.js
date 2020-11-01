@@ -56,4 +56,8 @@ const puppeteer = require("puppeteer");
         }
     })
     console.log(clicks)
+    console.log("Closing browser in 10 seconds")
+    await new Promise(resolve => setTimeout(resolve, 10000))
+    await browser.close()
+    console.log("Browser closed.")
 })()
