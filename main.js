@@ -22,6 +22,8 @@ class AutoBot {
         await this.openPage(this.link)
         if (this.link !== schulte) {
             console.log(`Cannot continue. Site is not schulte website.`)
+            console.log("Closing browser in 10 seconds")
+            await new Promise(resolve => setTimeout(resolve, 10000))
             await this.browser.close()
             return;
         }
